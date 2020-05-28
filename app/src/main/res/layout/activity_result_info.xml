@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Резултат"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Име"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+    </TextView>
+
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray"
+        android:textColor="#000"
+        android:padding="15dp"
+        >
+
+    </EditText>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:layout_marginTop="30dp">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ТЕГЛО: "
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/weightInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text=""
+                android:textSize="20dp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="КГ"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                >
+            </TextView>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="РЪСТ: "
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/heightInfoText"
+                android:text=""
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="СМ"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="РЕЗУЛТАТ: "
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resultInfoText"
+                android:text=""
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMI"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ДАТА: "
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateInfoText"
+                android:text=""
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/updateBtn"
+                android:padding="15dp"
+                android:background="@drawable/radius"
+                android:text="РЕДАКТИРАЙ"
+                android:textSize="18dp"
+                android:textColor="#fff">
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/removeBtn"
+                android:padding="15dp"
+                android:background="@drawable/radius_red"
+                android:text="ПРЕМАХНИ"
+                android:textSize="18dp"
+                android:textColor="#fff"
+                >
+            </Button>
+        </TableRow>
+
+
+
+    </TableLayout>
+
+</LinearLayout>

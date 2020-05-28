@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BMI Master</string>
+
+    <!--BMI calculation result strings start-->
+    <string name="underweight">Вашето тегло е прекалено малко за височината Ви</string>
+    <string name="normal">Вашето тегло е нормално за височината Ви</string>
+    <string name="overweight">Вашето тегло е прекалено голямо за височината Ви</string>
+    <string name="obese">На база тегло/височина Вие сте затлъстели</string>
+    <!--BMI calculation result strings end-->
+
+    <!--Toast strings start-->
+    <string name="savedToDb">Резултатът е запазен в базата данни</string>
+    <string name="resultUpdated">Резултатът е редактиран</string>
+    <string name="resultRemoved">Резултатът е премахнат</string>
+    <string name="listCleared">Списъкът е изчистен</string>
+    <!--BMI calculation result strings end-->
+
+    <string name="google_maps_key">AIzaSyB_qsP8AOP_P0MdlPz-48TDaJYjTP3vbjo</string>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:stretchColumns="1">
+
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Калкулатор"
+                    android:textSize="30dp"
+                    android:gravity="left">
+                </TextView>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="15dp">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listRecordsBtn"
+                    android:layout_marginTop="15dp"
+                    android:text="СПИСЪК"
+                    android:background="@drawable/radius_orange"
+                    android:textSize="18dp"
+                    android:textColor="#fff"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/locationBtn"
+                    android:layout_marginTop="15dp"
+                    android:text="КЪДЕ СЪМ?"
+                    android:background="@drawable/radius_darkgrey"
+                    android:textSize="18dp"
+                    android:textColor="#fff"
+                    />
+
+            </TableRow>
+        </TableLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userName"
+            android:layout_marginTop="150dp"
+            android:hint="Вашето име"
+            android:background="@drawable/bg_light"
+            android:textColor="#fff"
+            android:padding="15dp">
+        </EditText>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:stretchColumns="1"
+            android:layout_marginTop="220dp">
+
+            <TableRow>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bodyWeight"
+                    android:hint="Тегло (в кг)"
+                    android:background="@drawable/bg_light"
+                    android:textColor="#fff"
+                    android:padding="15dp">
+                </EditText>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bodyHeight"
+                    android:hint="Ръст (в см)"
+                    android:background="@drawable/bg_light"
+                    android:textColor="#fff"
+                    android:padding="15dp">
+                </EditText>
+            </TableRow>
+        </TableLayout>
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/calcBtn"
+            android:layout_marginTop="320dp"
+            android:text="Изчисли"
+            android:background="@drawable/radius"
+            android:textSize="22dp"
+            android:textColor="#fff"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp">
+        </Button>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Вашият BMI:"
+            android:layout_marginTop="400dp"
+            android:textSize="35dp"
+            android:textAlignment="center"
+            android:gravity="center">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bmiResultText"
+            android:text=""
+            android:layout_marginTop="460dp"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bmiResultSummary"
+            android:text=""
+            android:layout_marginTop="520dp"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:gravity="center">
+        </TextView>
+
+    </RelativeLayout>
+</ScrollView>
+

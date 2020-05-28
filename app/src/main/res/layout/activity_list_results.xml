@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Списък с резултати"
+        android:textSize="30dp"
+        android:gravity="left"
+        android:layout_marginTop="10dp">
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearBtn"
+            android:text="ИЗЧИСТИ СПИСЪКА"
+            android:background="@drawable/radius_red"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_alignParentRight="true">
+        </Button>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultsList"
+        android:background="@drawable/radius_grey"
+
+        android:padding="10dp">
+    </ListView>
+
+</LinearLayout>
