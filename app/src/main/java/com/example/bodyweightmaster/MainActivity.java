@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView bmiResult, bmiResultSummary;
 
     //gets the body mass index according to user's weight and height
-    private double GetBmi(double weigth, double height){
+    private double GetBmi(double weight, double height){
         double bmi = 0;
 
         //convert height to m2
@@ -31,17 +31,19 @@ public class MainActivity extends AppCompatActivity {
         double heightM2 = height * height;
 
         //check if user has entered invalid values
-        if(weigth <= 0 || heightM2 <= 0){
-            bmiResult.setText("Please check the values you entered.");
+        if(weight <= 0 || heightM2 <= 0){
+            bmiResult.setText(R.string.validationError);
         }
 
         else{
-            bmi = weigth / heightM2;
+            bmi = weight / heightM2;
+            bmiResult.setText(Double.toString((bmi)));
+
+            //get the summary
+            GetSummary(bmi);
         }
 
-        double bmiRounded = Math.round(bmi);
-
-        return bmiRounded;
+        return (double) Math.round(bmi);
     }
 
     //gets bmi result summary
@@ -140,10 +142,7 @@ public class MainActivity extends AppCompatActivity {
                     double bmi = GetBmi(weightValue, heightValue);
                     String  usernameValue = username.getText().toString();
 
-                    bmiResult.setText(Double.toString((bmi)));
 
-                    //get the summary
-                    GetSummary(bmi);
 
                     //insert into datebase
                     db = SQLiteDatabase.openOrCreateDatabase(
@@ -156,11 +155,22 @@ public class MainActivity extends AppCompatActivity {
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                     String strDate = sdf.format(new Date(System.currentTimeMillis()));
 
-                    db.execSQL(q, new Object[]{usernameValue, weightValue, heightValue, bmi, strDate});
+                    int validationError = R.string.validationError;
+                    String validation = bmiResult.toString();
 
-                    Toast.makeText(getApplicationContext(),
-                            R.string.savedToDb,
-                            Toast.LENGTH_LONG).show();
+                    if(validation.equals("Моля, проверете данните, коите сте въвели")){
+                        Toast.makeText(getApplicationContext(),
+                                R.string.notSavedToDb,
+                                Toast.LENGTH_LONG).show();
+                    }
+
+                    else{
+                        db.execSQL(q, new Object[]{usernameValue, weightValue, heightValue, bmi, strDate});
+
+                        Toast.makeText(getApplicationContext(),
+                                R.string.savedToDb,
+                                Toast.LENGTH_LONG).show();
+                    }
 
                 }catch(Exception e){
                     Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show();

@@ -2,6 +2,7 @@
     <string name="app_name">BMI Master</string>
 
     <!--BMI calculation result strings start-->
+    <string name="validationError">Моля, проверете данните, коите сте въвели</string>
     <string name="underweight">Вашето тегло е прекалено малко за височината Ви</string>
     <string name="normal">Вашето тегло е нормално за височината Ви</string>
     <string name="overweight">Вашето тегло е прекалено голямо за височината Ви</string>
@@ -10,6 +11,7 @@
 
     <!--Toast strings start-->
     <string name="savedToDb">Резултатът е запазен в базата данни</string>
+    <string name="notSavedToDb">Резултатът не е запазен в базата данни</string>
     <string name="resultUpdated">Резултатът е редактиран</string>
     <string name="resultRemoved">Резултатът е премахнат</string>
     <string name="listCleared">Списъкът е изчистен</string>
